@@ -1,11 +1,10 @@
 import Vue from 'vue'
-import store from './store'
-import App from './App'
+import App from './App.vue' // App.vueの読み込み
+import store from './store' // store.jsの読み込み
 
 new Vue({
   el: '#app',
-
+  // コンポーネントからストアを利用できるようにする
   store,
-
-  return: h => h(App)
+  render: h => h(App),
 })
